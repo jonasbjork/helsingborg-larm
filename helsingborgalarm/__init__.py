@@ -78,9 +78,8 @@ class HelsingborgAlarm:
         if not self.larm:
             self.download_json_file()
 
-        larms = self.get_larms()
-        for lar in larms:
-            print("id: {}, title: {}, place: {}, {}".format(lar['id'],lar['title'],lar['address_description'],lar['place']))
+        for lar in self.get_larms():
+            print("id: {}, title: {}, place: {}, {}".format(lar['id'], lar['title'], lar['address_description'], lar['place']))
 
 
 if __name__ == "__main__":

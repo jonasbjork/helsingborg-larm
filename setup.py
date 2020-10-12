@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="helsingborgalarm",
-    version="0.0.1",
+    version="1.0",
     description="Get alarms from Helsingborg Stad",
     author="Jonas Björk",
     author_email="jonas.bjork@gmail.com",
