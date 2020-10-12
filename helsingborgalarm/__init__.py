@@ -56,6 +56,13 @@ class HelsingborgAlarm:
             # id, date, modified, status, type, title->plain_text,
             # place->name, extend (?), address, address_description->plain_text,
             # coordinate_x, coordinate_y
+
+            place = ""
+            try:
+                place = la['place'][0]['name']
+            except IndexError:
+                place = "Unknown"
+
             larms.append(
                 {
                     'id': la['id'],
@@ -64,7 +71,7 @@ class HelsingborgAlarm:
                     'status': la['status'],
                     'type': la['type'],
                     'title': la['title']['plain_text'],
-                    'place': la['place'][0]['name'],
+                    'place': place,
                     'extend': la['extend'],
                     'address': la['address'],
                     'address_description': la['address_description']['plain_text'],
